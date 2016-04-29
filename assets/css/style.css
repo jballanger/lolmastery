@@ -95,6 +95,7 @@ img.superbg {
     position:absolute;
     z-index:2;
     font-family:'Oswald';
+    cursor:pointer;
   }
 
   .maincontainer form .container_checkbox_select {

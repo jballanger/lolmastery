@@ -17,5 +17,5 @@
   <section class="maincontainer">
     <img class="superbg" alt="" title="" src="assets/images/morgana.jpg">
     <header class="header">
-      <h1>My mastery(i) is better</h1>
+      <h1><a href="index.php" title="Back to index">My mastery(i) is better</a></h1>
     </header>

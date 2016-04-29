@@ -23,7 +23,6 @@ if(isset($_POST['summoner']))
 	}
 	?>
 
-	<html>
 	<?php require_once('header.php'); ?>
 		<a class="back_to_index" href='index.php'><i class="fa fa-long-arrow-left"></i> Back to index</a>
 		<br />
@@ -36,7 +35,7 @@ if(isset($_POST['summoner']))
 				if(isset(${'summoner'.$i}))
 				{
 					echo "<p><span>". htmlentities(${'summoner'.$i}->name()) ."</span> has a total of <span>". ${'summonerMastery'.$i}->totalPoint() ." points</span></p>";
-				}		
+				}
 			}
 		?>
 		</div>
@@ -76,9 +75,9 @@ if(isset($_POST['summoner']))
 				        			borderColor: 'rgba(157,148,148,1)',
 				        			borderWidth: 1,
 				        			data: [summonerData".$i."[1], summonerData".$i."[2], summonerData".$i."[3], summonerData".$i."[4], summonerData".$i."[5]]
-				        		  }"; 
+				        		  }";
 				        	if($i != ($nOfSummoner - 1))
-			        		{ 
+			        		{
 			        			echo ",";
 			        		}
 				        }
@@ -135,11 +134,10 @@ if(isset($_POST['summoner']))
 	            window.myBar.update();
 	        };
 		</script>
-	</body>
-	</html>
-<?php 
+<?php
 }
 else
 {
 	header('Location:index.php');
 }
+ require_once('footer.php');
