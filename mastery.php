@@ -24,27 +24,26 @@ if(isset($_POST['summoner']))
 	?>
 
 	<html>
-	<head>
-		<title>LoL Mastery</title>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	</head>
-	<body>
-		<a href='index.php'>Back to index</a><br>
-		<canvas  id='myChart' width="1080" height="540" style="width: 1080px; height: 540px;"></canvas>
+	<?php require_once('header.php'); ?>
+		<a class="back_to_index" href='index.php'><i class="fa fa-long-arrow-left"></i> Back to index</a>
+		<br />
+		<canvas id='myChart' width="1080" height="540" style="width: 1080px; height: 540px;"></canvas>
 
+		<div class="result_chart">
 		<?php
 			for($i = 0; $i < $nOfSummoner; $i++)
 			{
 				if(isset(${'summoner'.$i}))
 				{
-					echo "<h4>". ${'summoner'.$i}->name() ." has a total of ". ${'summonerMastery'.$i}->totalPoint() ." points</h4>";
+					echo "<p><span>". htmlentities(${'summoner'.$i}->name()) ."</span> has a total of <span>". ${'summonerMastery'.$i}->totalPoint() ." points</span></p>";
 				}		
 			}
 		?>
+		</div>
 
-		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-		<script src='assets/js/Chart.js'></script>
-		<script charset="utf-8">
+		<script type="text/javascript" charset="utf-8" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script type="text/javascript" charset="utf-8" src='assets/js/Chart.js'></script>
+		<script type="text/javascript" charset="utf-8">
 			<?php
 				for($i = 0; $i < $nOfSummoner; $i++)
 				{
@@ -94,8 +93,6 @@ if(isset($_POST['summoner']))
 	                type: 'bar',
 	                data: barChartData,
 	                options: {
-	                    // Elements options apply to all of the options unless overridden in a dataset
-	                    // In this case, we are setting the border of each bar to be 2px wide and green
 	                    elements: {
 	                        rectangle: {
 	                            borderWidth: 2,
@@ -103,17 +100,26 @@ if(isset($_POST['summoner']))
 	                            borderSkipped: 'bottom'
 	                        }
 	                    },
-	                    responsive: false,
+	                    responsive: true,
 	                    legend: {
 	                        position: 'top',
 	                    },
 	                    title: {
 	                        display: true,
-	                        text: 'Champion Mastery Level'
-	                    }
+	                        text: 'Champion Mastery Level',
+													fontColor: '#FFF',
+													fontFamily: 'Oswald',
+													fontSize: 20
+	                    },
+						scales: {
+						    yAxes: [{
+						        ticks: {
+						            beginAtZero:true
+						        }
+						    }]
+						},
 	                }
 	            });
-
 	        };
 
 			var addDataset = function() {

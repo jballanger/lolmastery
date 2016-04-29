@@ -28,23 +28,3 @@ Are you better than your mate ?
 <?php
   require_once('footer.php');
 ?>
-<script>
-/*
-var i = 1;
-function addFriend()
-{
-  //var html = "FC U<div class='add_summoner' id='summoner["+ i +"]'><input type='text' name='summoner["+ i +"][name]' placeholder='Name...'/><select name='summoner["+ i +"][region]></select></div>";
-  var html = "<div class='add_summoner'><input type='text' name='summoner[x][name]' placeholder='Name...'/><select name='summoner[x][region]></select></div>";
-  
-  $('.container_add_summoner').append(html);
-  //$('#summoner'+ i +' select').load('regionList.php');
-  i = i + 1;
-}
-$(document).ready(function()
-{
-  $('#add_summoner').click(function()
-  {
-    addFriend();
-  });
-});
-</script>

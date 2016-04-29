@@ -5148,7 +5148,7 @@ module.exports = function() {
 	//Globally expose the defaults to allow for user updating/changing
 	Chart.defaults = {
 		global: {
-			responsive: false,
+			responsive: true,
 			responsiveAnimationDuration: 0,
 			maintainAspectRatio: true,
 			events: ["mousemove", "mouseout", "click", "touchstart", "touchmove"],
@@ -5159,7 +5159,7 @@ module.exports = function() {
 			},
 			onClick: null,
 			defaultColor: 'rgba(0,0,0,0.1)',
-			defaultFontColor: '#666',
+			defaultFontColor: '#FFF',
 			defaultFontFamily: "'Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
 			defaultFontSize: 12,
 			defaultFontStyle: 'normal',

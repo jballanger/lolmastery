@@ -19,7 +19,7 @@ class Summoner
 
 	public function getSummoner($sName, $region)
 	{
-		$infos = file_get_contents("https://". $region .".api.pvp.net/api/lol/". $region ."/v1.4/summoner/by-name/". $sName ."?api_key=". KEY);
+		$infos = @file_get_contents("https://". $region .".api.pvp.net/api/lol/". $region ."/v1.4/summoner/by-name/". $sName ."?api_key=". KEY);
 		if(!$this->isValid($infos))
 		{
 			return;

@@ -35,6 +35,11 @@ img.superbg {
     margin:0;
     padding-top:190px;
   }
+  .maincontainer .header h1 a{
+    text-decoration:none;
+    color:white;
+  }
+/*Maincontainer index*/
   .maincontainer form .container_input{
     width:90%;
     height:30px;
@@ -109,7 +114,7 @@ img.superbg {
   .maincontainer form .container_checkbox_select label input[type="radio"].disabled{
     background-color:rgba(226,226,229,.05);
   }
-  .maincontainer form .container_checkbox_select select{
+  .maincontainer form .container_checkbox_select select[name="summoner[0][region]"]{
     margin:5px 0 0 0;
     width:100%;
     height:25px;
@@ -120,7 +125,7 @@ img.superbg {
     outline:none;
     border:1px solid black;
   }
-  .maincontainer form .container_checkbox_select select option{
+  .maincontainer form .container_checkbox_select select[name="summoner[0][region]"] option{
     font-family:'Oswald';
     text-transform:uppercase;
     color:black;
@@ -184,6 +189,39 @@ img.superbg {
     font-size:14px;
   }
 
+/*Maincontainer result page*/
+  .maincontainer .back_to_index{
+    text-decoration:none;
+    color:white;
+    font-family:'Oswald';
+    margin-left:10px;
+    text-transform:uppercase;
+    position:fixed;
+    top:0;
+    left:0;
+  }
+  .maincontainer canvas{
+    background-color:rgba(226,226,229,.05);
+    border-top:1px solid black;
+    border-bottom:1px solid black;
+  }
+  .maincontainer .result_chart{
+    color:white;
+    font-family:'Oswald';
+    font-size:18px;
+    width:90%;
+    margin:10px auto 10px auto;
+    display:flex;
+    flex-flow:row wrap;
+    align-items:center;
+    justify-content:space-around;
+  }
+  .maincontainer .result_chart p{
+        margin:5px 0 5px 0;
+  }
+  .maincontainer .result_chart span{
+    text-shadow:2px 2px 1px rgba(0,0,0,1);
+  }
 /*The footer*/
   .maincontainer .footer nav{
     width:90%;
@@ -233,7 +271,7 @@ img.superbg {
   .maincontainer form .container_checkbox_select label{
     font-size:18px;
   }
-  .maincontainer form .container_checkbox_select select{
+  .maincontainer form .container_checkbox_select select[name="summoner[0][region]"]{
     width:auto;
     float:right;
     margin:0;
@@ -255,5 +293,20 @@ img.superbg {
   }
   .maincontainer .text_punchline{
     font-size:22px;
+  }
+
+  .maincontainer .result_chart{
+    width:100%;
+  }
+  .maincontainer .result_chart p{
+        width:50%;
+        padding:2% 0 2% 0;
+        float:left;
+        text-align:center;
+  }
+}
+@media all and (min-width:1440px){
+  .maincontainer .result_chart p{
+        font-size:24px;
   }
 }
