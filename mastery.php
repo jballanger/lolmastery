@@ -10,7 +10,7 @@ if(isset($_POST['summoner']))
 			${'summoner'.$i} = new Summoner($_POST['summoner'][$i]['name'], $_POST['summoner'][$i]['region']);
 			if(empty(${'summoner'.$i}->id()))
 			{
-				echo 'The summoner <b>'. utf8_decode(${'summoner'.$i}->name()) .'</b> is non-existant or unavailable on '. strtoupper(${'summoner'.$i}->region()) .' region.<br>';
+				echo '<div class="error_chart">The summoner <b>'. utf8_decode(${'summoner'.$i}->name()) .'</b> is non-existant or unavailable on '. strtoupper(${'summoner'.$i}->region()) .' region.<br><i class="close_error_chart fa fa-close"></i></div>';
 				unset(${'summoner'.$i});
 			}
 			else
