@@ -1,14 +1,19 @@
 <?php
   require_once('header.php');
+
+  if(isset($_GET['error']))
+  {
+    echo "<div class='error_chart'>The Summoner name or Region field wasn't given.<br><i class='close_error_chart fa fa-close'></i></div>";
+  }
 ?>
-    <form action="mastery.php" method="POST" accept-charset="UTF-8">
+    <form action="team.php" method="POST" accept-charset="UTF-8">
       <div class="container_input">
-        <input type="text" name="summoner[0][name]" placeholder="Search..." required />
+        <input type="text" name="summoner[0][name]" placeholder="Summoner Name" required />
         <input type="submit" value="I'm the Best!" name="submit" />
       </div>
       <div class="container_checkbox_select">
-        <label><input type="radio" name="isearcha" value="summoner" /> Summoner</label>
-        <label><input type="radio" name="isearcha" value="team" /> Team</label>
+        <label><input type="radio" name="isearcha" value="byName" /> Summoner</label>
+        <label><input type="radio" name="isearcha" value="byTeam" /> Team</label>
         <label><input class="disabled" type="radio" name="isearcha" value="club" disabled /> Club<span>(soon)</span></label>
         <select name="summoner[0][region]" required>
           <?php require('regionList.php'); ?>

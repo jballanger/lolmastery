@@ -115,7 +115,7 @@ img.superbg {
   .maincontainer form .container_checkbox_select label input[type="radio"].disabled{
     background-color:rgba(226,226,229,.05);
   }
-  .maincontainer form .container_checkbox_select select[name="summoner[0][region]"]{
+  .maincontainer form .container_checkbox_select select[name="summoner[0][region]"], select[name="team[region]"]{
     margin:5px 0 0 0;
     width:100%;
     height:25px;
@@ -126,7 +126,7 @@ img.superbg {
     outline:none;
     border:1px solid black;
   }
-  .maincontainer form .container_checkbox_select select[name="summoner[0][region]"] option{
+  .maincontainer form .container_checkbox_select select[name="summoner[0][region]"], select[name="team[region]"] option{
     font-family:'Oswald';
     text-transform:uppercase;
     color:black;
@@ -291,7 +291,7 @@ img.superbg {
   .maincontainer form .container_checkbox_select label{
     font-size:18px;
   }
-  .maincontainer form .container_checkbox_select select[name="summoner[0][region]"]{
+  .maincontainer form .container_checkbox_select select[name="summoner[0][region]"], select[name="team[region]"]{
     width:auto;
     float:right;
     margin:0;

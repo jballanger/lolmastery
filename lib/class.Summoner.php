@@ -9,17 +9,24 @@ class Summoner
 			  $region,
 			  $platformId;
 
-	public function __construct($sName, $region)
+	public function __construct($sName, $region, $method)
 	{
 		$this->setName($sName);
 		$this->setRegion($region);
 		$this->setPlatformId($region);
-		$this->getSummoner($sName, $region);
+		$this->getSummoner($sName, $region, $method);
 	}
 
-	public function getSummoner($sName, $region)
+	public function getSummoner($sName, $region, $method)
 	{
-		$infos = @file_get_contents("https://". $region .".api.pvp.net/api/lol/". $region ."/v1.4/summoner/by-name/". $sName ."?api_key=". KEY);
+		if($method == 'byId')
+		{
+			$infos = @file_get_contents("https://". $region .".api.pvp.net/api/lol/". $region ."/v1.4/summoner/". $sName ."?api_key=". KEY);
+		}
+		elseif($method == 'byName')
+		{
+			$infos = @file_get_contents("https://". $region .".api.pvp.net/api/lol/". $region ."/v1.4/summoner/by-name/". $sName ."?api_key=". KEY);
+		}
 		if(!$this->isValid($infos))
 		{
 			return;

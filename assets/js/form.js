@@ -13,4 +13,33 @@ $(document).ready(function()
 	{
 		addFriend();
 	});
+
+	$("input[type='radio']").change(function()
+	{
+		if($(this).val() == 'byName')
+		{
+			$("input[type='text']").each(function(i)
+			{
+				$(this).attr('name', 'summoner['+ i +'][name]');
+				$(this).attr('placeholder', 'Summoner Name');
+			})
+			$("select").each(function(i)
+			{
+				$(this).attr('name', 'summoner['+ i +'][region]');
+			})
+		}
+		if($(this).val() == 'byTeam')
+		{
+			$("input[type='text']").each(function(i)
+			{
+				$(this).attr('name', 'team[name]');
+				$(this).attr('placeholder', 'Summoner Name of a Team member');
+			})
+			$("select").each(function(i)
+			{
+				$(this).attr('name', 'team[region]');
+			})
+			$('.add_summoner').remove();
+		}
+	});
 });

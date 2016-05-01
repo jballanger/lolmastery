@@ -7,7 +7,7 @@ if(isset($_POST['summoner']))
 	{
 		if(isset($_POST['summoner'][$i]['name']) && isset($_POST['summoner'][$i]['region']))
 		{
-			${'summoner'.$i} = new Summoner($_POST['summoner'][$i]['name'], $_POST['summoner'][$i]['region']);
+			${'summoner'.$i} = new Summoner($_POST['summoner'][$i]['name'], $_POST['summoner'][$i]['region'], $_POST['isearcha']);
 			if(empty(${'summoner'.$i}->id()))
 			{
 				echo '<div class="error_chart">The summoner <b>'. utf8_decode(${'summoner'.$i}->name()) .'</b> is non-existant or unavailable on '. strtoupper(${'summoner'.$i}->region()) .' region.<br><i class="close_error_chart fa fa-close"></i></div>';
@@ -19,6 +19,10 @@ if(isset($_POST['summoner']))
 				${'summonerMastery'.$i}->getChampionLevel(${'summonerMastery'.$i}->mastery());
 				${'summonerMastery'.$i}->getTotalPoint(${'summonerMastery'.$i}->mastery());
 			}
+		}
+		else
+		{
+			header('Location:index.php?error');
 		}
 	}
 	?>
