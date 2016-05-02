@@ -33,7 +33,7 @@ if(isset($_POST['team']) || isset($_GET['team']))
 	{
 		if(isset($_SESSION['team']))
 		{
-			echo "<i class=\"fa fa-spinner fa-pulse\"></i>";//<image src='assets/images/loader.gif' />";
+			echo "<div class=\"container_my_loader\"><i class=\"fa fa-spinner fa-pulse fa-3x my_loader\"></i></div>";//<image src='assets/images/loader.gif' />";
 			$team = $_SESSION['team'];
 			$teamNumber = (int) $_GET['team'];
 			$numberOfMember = count($team[$_SESSION['summonerId']][$teamNumber]['roster']['memberList']);

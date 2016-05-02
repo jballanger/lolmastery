@@ -279,6 +279,18 @@ img.superbg {
   .maincontainer .choose_your_team .the_teams a:hover{
     background-color:rgba(226,226,229,.4);
   }
+
+  /*The loader*/
+  .maincontainer .container_my_loader{
+    position:fixed;
+    top:50%;
+    left:50%;
+    z-index:9999;
+  }
+  .maincontainer .container_my_loader i{
+    color:white;
+    font-size:72px;
+  }
 /*The footer*/
   .maincontainer .footer nav{
     width:90%;

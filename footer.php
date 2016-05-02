@@ -11,7 +11,6 @@
         </p>
       </footer>
     </section>
-    <script src="assets/js/Chart.js"></script>
     <script src="assets/js/jquery-2.2.0.min.js"></script>
     <script src="assets/js/superbg.js"></script>
     <script src='assets/js/form.js'></script>
