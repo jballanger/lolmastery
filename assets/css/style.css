@@ -242,6 +242,40 @@ img.superbg {
     right:25px;
     cursor:pointer;
   }
+
+  /*Team page*/
+  .maincontainer .choose_your_team{
+    width:100%;
+  }
+  .maincontainer .choose_your_team h2{
+    text-align:center;
+    color:white;
+    font-size:24px;
+    margin:5px 0 5px 0;
+    font-family:'Oswald';
+    text-transform:uppercase;
+    text-shadow:2px 2px 1px rgba(0,0,0,1);
+  }
+  .maincontainer .choose_your_team .the_teams{
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    flex-flow:row wrap;
+  }
+  .maincontainer .choose_your_team .the_teams a{
+    color:white;
+    text-shadow:2px 2px 1px rgba(0,0,0,1);
+    font-family:'Oswald';
+    display:inline-block;
+    margin:0;
+    padding:5px;
+    background-color:rgba(226,226,229,.05);
+    border:1px solid black;
+    border-radius:5px;
+    text-decoration:none;
+    text-transform:uppercase;
+
+  }
 /*The footer*/
   .maincontainer .footer nav{
     width:90%;

@@ -30,7 +30,7 @@ class Team extends Summoner
 	{
 		for($i = 0; $i < $this->numberOfTeam; $i++)
 		{
-			echo "<a href='team.php?team=". $i ."'>". $team[$this->summonerId][$i]['name']. " - [" . $team[$this->summonerId][$i]['tag'] ."] </a><br />";
+			echo "<a href='team.php?team=". $i ."'>". $team[$this->summonerId][$i]['name']. " - [" . $team[$this->summonerId][$i]['tag'] ."] </a>";
 		}
 	}
 

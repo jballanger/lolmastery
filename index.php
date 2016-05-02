@@ -12,7 +12,7 @@
         <input type="submit" value="I'm the Best!" name="submit" />
       </div>
       <div class="container_checkbox_select">
-        <label><input type="radio" name="isearcha" value="byName" /> Summoner</label>
+        <label><input type="radio" name="isearcha" value="byName" checked /> Summoner</label>
         <label><input type="radio" name="isearcha" value="byTeam" /> Team</label>
         <label><input class="disabled" type="radio" name="isearcha" value="club" disabled /> Club<span>(soon)</span></label>
         <select name="summoner[0][region]" required>

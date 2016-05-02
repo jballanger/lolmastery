@@ -1,4 +1,11 @@
 <?php
+require_once('header.php');
+?>
+<a class="back_to_index" href='index.php'><i class="fa fa-long-arrow-left"></i> Back to index</a>
+	<div class="choose_your_team">
+		<h2>Choose a team</h2>
+			<div class="the_teams">
+<?php
 require 'lib/autoload.php';
 session_start();
 
@@ -26,7 +33,7 @@ if(isset($_POST['team']) || isset($_GET['team']))
 	{
 		if(isset($_SESSION['team']))
 		{
-			echo "<image src='assets/images/loader.gif' />";
+			echo "<i class=\"fa fa-spinner fa-pulse\"></i>";//<image src='assets/images/loader.gif' />";
 			$team = $_SESSION['team'];
 			$teamNumber = (int) $_GET['team'];
 			$numberOfMember = count($team[$_SESSION['summonerId']][$teamNumber]['roster']['memberList']);
@@ -50,4 +57,7 @@ else
 {
 	header('Location:index.php');
 }
+echo '</div>
+		</div>';
+require_once('footer.php');
 //56741551
