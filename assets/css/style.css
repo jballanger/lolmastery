@@ -274,7 +274,10 @@ img.superbg {
     border-radius:5px;
     text-decoration:none;
     text-transform:uppercase;
-
+    transition:all .3s;
+  }
+  .maincontainer .choose_your_team .the_teams a:hover{
+    background-color:rgba(226,226,229,.4);
   }
 /*The footer*/
   .maincontainer .footer nav{
