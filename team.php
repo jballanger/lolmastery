@@ -1,6 +1,8 @@
 <?php
 require_once('header.php');
 ?>
+<script src="assets/js/jquery-2.2.0.min.js"></script>
+<script src="assets/js/superbg.js"></script>
 <a class="back_to_index" href='index.php'><i class="fa fa-long-arrow-left"></i> Back to index</a>
 	<div class="choose_your_team">
 		<h2>Choose a team</h2>
