@@ -11,15 +11,17 @@ class Team extends Summoner
 
 	public function getTeam($summonerId, $summonerRegion)
 	{
-		$team = file_get_contents("https://". $summonerRegion .".api.pvp.net/api/lol/". $summonerRegion ."/v2.4/team/by-summoner/". $summonerId ."?api_key=". KEY);
+		$team = @file_get_contents("https://". $summonerRegion .".api.pvp.net/api/lol/". $summonerRegion ."/v2.4/team/by-summoner/". $summonerId ."?api_key=". KEY);
 
 		if(!$this->isValid($team))
 		{
+			echo "<h2>Team not found</h2>";
 			return;
 			exit();
 		}
 
 		$team = json_decode($team, true);
+		var_dump($team);
 		$this->numberOfTeam = (count($team[$summonerId]));
 
 		$this->check($team);

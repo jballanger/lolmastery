@@ -2,7 +2,7 @@
 	$serveur='localhost';
 	$bdd='api_challenge2016';
 	$utilisateur='root';
-	$mdp='cocacerise65';
+	$mdp= '';
 	$options=array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8');
 
 	try{

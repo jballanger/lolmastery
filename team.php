@@ -27,13 +27,17 @@ if(isset($_POST['team']) || isset($_GET['team']))
 			$_SESSION['summonerId'] = $summoner->id();
 			$_SESSION['summonerRegion'] = $summoner->region();
 		}
+		else
+		{
+			header('Location: index.php?error');
+		}
 	}
 
 	if(isset($_GET['team']))
 	{
 		if(isset($_SESSION['team']))
 		{
-			echo "<div class=\"container_my_loader\"><i class=\"fa fa-spinner fa-pulse fa-3x my_loader\"></i></div>";//<image src='assets/images/loader.gif' />";
+			echo "<div class=\"container_my_loader\"><i class=\"fa fa-spinner fa-pulse fa-3x my_loader\"></i></div>";
 			$team = $_SESSION['team'];
 			$teamNumber = (int) $_GET['team'];
 			$numberOfMember = count($team[$_SESSION['summonerId']][$teamNumber]['roster']['memberList']);
