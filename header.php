@@ -1,6 +1,3 @@
-<?php
-  require_once('assets/php/connexion.php');
- ?>
  <!DOCTYPE html>
 <html lang="en">
  <head>
