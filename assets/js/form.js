@@ -22,11 +22,15 @@ $(document).ready(function()
 			{
 				$(this).attr('name', 'summoner['+ i +'][name]');
 				$(this).attr('placeholder', 'Summoner Name');
-			})
+			});
+
 			$("select").each(function(i)
 			{
 				$(this).attr('name', 'summoner['+ i +'][region]');
-			})
+			});
+
+			$('form').attr('action', 'mastery.php');
+			$('.button_add_summoner').fadeIn('fast');
 		}
 		if($(this).val() == 'byTeam')
 		{
@@ -34,11 +38,16 @@ $(document).ready(function()
 			{
 				$(this).attr('name', 'team[name]');
 				$(this).attr('placeholder', 'Summoner Name of a Team member');
-			})
+			});
+
 			$("select").each(function(i)
 			{
 				$(this).attr('name', 'team[region]');
-			})
+			});
+
+			$('form').attr('action', 'team.php');
+
+			$('.button_add_summoner').fadeOut('fast');
 			$('.add_summoner').remove();
 		}
 	});

@@ -21,7 +21,6 @@ class Team extends Summoner
 		}
 
 		$team = json_decode($team, true);
-		var_dump($team);
 		$this->numberOfTeam = (count($team[$summonerId]));
 
 		$this->check($team);

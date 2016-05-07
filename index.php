@@ -6,7 +6,7 @@
     echo "<div class='error_chart'>The Summoner name or Region field wasn't given.<br><i class='close_error_chart fa fa-close'></i></div>";
   }
 ?>
-    <form action="team.php" method="POST" accept-charset="UTF-8">
+    <form action="mastery.php" method="POST" accept-charset="UTF-8">
       <div class="container_input">
         <input type="text" name="summoner[0][name]" placeholder="Summoner Name" required />
         <input type="submit" value="I'm the Best!" name="submit" />
